@@ -9,6 +9,8 @@ import { MissingWalletError } from "../helpers"
 import { Api } from "./rest";
 
 import { Params as typeParams} from "./types"
+import { StoredGame as typeStoredGame} from "./types"
+import { SystemInfo as typeSystemInfo} from "./types"
 
 export {  };
 
@@ -67,6 +69,8 @@ class SDKModule {
 		this.updateTX(client);
 		this.structure =  {
 						Params: getStructure(typeParams.fromPartial({})),
+						StoredGame: getStructure(typeStoredGame.fromPartial({})),
+						SystemInfo: getStructure(typeSystemInfo.fromPartial({})),
 						
 		};
 		client.on('signer-changed',(signer) => {			
