@@ -5,5 +5,6 @@ import "github.com/alice/checkers/x/checkers/testutil"
 const (
 	alice = testutil.Alice
 	bob   = testutil.Bob
-	carol = testutil.Bob
+	carol = testutil.Carol
+	doug  = testutil.Doug
 )
